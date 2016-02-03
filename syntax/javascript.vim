@@ -131,10 +131,12 @@ syntax keyword jsConditional    if else switch
 syntax keyword jsRepeat         do while for
 syntax keyword jsLabel          case default
 syntax keyword jsKeyword        yield
+syntax keyword jsThis           this self
 syntax keyword jsClass          extends class
 syntax keyword jsException      try catch throw finally
 syntax keyword jsAsyncKeyword   async await
 syntax match   jsLabel          /\<[a-zA-Z_$][0-9a-zA-Z_$\-]*\(\s*:\)\@=/
+
 
 syntax keyword jsGlobalObjects   Array Boolean Date Function Iterator Number Object Symbol Map WeakMap Set RegExp String Proxy Promise ParallelArray ArrayBuffer DataView Float32Array Float64Array Int16Array Int32Array Int8Array Uint16Array Uint32Array Uint8Array Uint8ClampedArray Intl JSON Math console document window
 syntax match   jsGlobalObjects  /\%(Intl\.\)\@<=\(Collator\|DateTimeFormat\|NumberFormat\)/
@@ -284,10 +286,10 @@ if version >= 508 || !exists("did_javascript_syn_inits")
   HiLink jsOf                   Operator
   HiLink jsStorageClass         StorageClass
   HiLink jsClass                Structure
-  HiLink jsThis                 Special
   HiLink jsStatic               Special
   HiLink jsSuper                Special
   HiLink jsNan                  Number
+  HiLink jsThis                 Type
   HiLink jsNull                 Type
   HiLink jsUndefined            Type
   HiLink jsNumber               Number
